@@ -1,9 +1,13 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
+import numpy as np;
+import pandas as pd
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS to allow cross-origin requests from Reac
 
 def calculate_bmi(weight, height):
     return weight / ((height / 100) ** 2)
